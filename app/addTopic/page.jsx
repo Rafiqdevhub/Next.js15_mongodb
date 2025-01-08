@@ -1,10 +1,11 @@
+"use client";
+
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const AddTopic = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-
   const router = useRouter();
 
   const handleSubmit = async (e) => {
