@@ -4,7 +4,7 @@ import { HiOutlineTrash } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const RemoveBtn = () => {
+const RemoveBtn = ({ id }) => {
   const router = useRouter();
   const removeTopic = async () => {
     const confirmed = confirm("Are you sure?");
