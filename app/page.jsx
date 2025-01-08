@@ -1,11 +1,8 @@
+import TodoList from "@/components/TodoList";
 import React from "react";
 
 const Home = () => {
-  return (
-    <div>
-      <h1 className="">Home</h1>
-    </div>
-  );
+  return <TodoList />;
 };
 
 export default Home;
