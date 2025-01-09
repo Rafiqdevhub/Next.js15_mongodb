@@ -15,7 +15,7 @@ const TodoList = async () => {
 
       return res.json();
     } catch (error) {
-      console.log("Error loading topics: ", error);
+      throw new Error("Failed to fetch topics");
     }
   };
 
