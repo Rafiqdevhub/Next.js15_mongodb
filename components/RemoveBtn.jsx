@@ -9,12 +9,18 @@ const RemoveBtn = ({ id }) => {
     const confirmed = confirm("Are you sure?");
 
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
-        method: "DELETE",
-      });
+      try {
+        const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
+          method: "DELETE",
+        });
 
-      if (res.ok) {
-        router.refresh();
+        if (res.ok) {
+          router.refresh();
+        } else {
+          console.error("Failed to delete the topic");
+        }
+      } catch (error) {
+        throw new Error("Failed to delete the topic");
       }
     }
   };
