@@ -6,7 +6,7 @@ const TodoList = async () => {
   const getTopics = async () => {
     try {
       const res = await fetch("http://localhost:3000/api/topics", {
-        cache: "no-store",
+        cache: "no-store", // for most up-to-date data we used no-store
       });
 
       if (!res.ok) {
