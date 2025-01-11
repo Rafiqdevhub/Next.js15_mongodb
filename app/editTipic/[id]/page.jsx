@@ -12,7 +12,7 @@ const getTopicById = async (id) => {
 
     return res.json();
   } catch (error) {
-    console.log(error);
+    throw new Error("Failed to fetch topic");
   }
 };
 const EditTopic = async ({ params }) => {
